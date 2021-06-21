@@ -1,71 +1,80 @@
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Movement : MonoBehaviour 
 {
     #region public
-        public float movement_speed = 7f;
+        [FormerlySerializedAs("movement_speed")] public float movementSpeed = 7f;
     #endregion
 
-    float move_dir = 0f;
-    bool p_FacingRight = true;
-    Rigidbody2D rb;
-    Animator animator;
-    SpriteRenderer spriteRenderer;
+    private float _moveDir;
+    private bool _pFacingRight = true;
+    private Rigidbody2D _rb;
+    private Animator _animator;
+    private static readonly int Speed = Animator.StringToHash("speed");
 
     private void Start() 
     {
         //Initialization of components
-        rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
 
     private void Update() 
     {
-        if(!Fighting.IsFighting) //If character is fighting than he can't move
+        //If character is fighting than he can't move
+        if(!Fighting.IsFighting) 
         {
-            move_dir = Input.GetAxisRaw("Horizontal"); //Gives the variable a direction of x
+            _moveDir = Input.GetAxisRaw("Horizontal"); //Gives the variable a direction of x
         }
-        else move_dir = 0; //If he's fighting than he stops
+        else _moveDir = 0; //If he's fighting than he stops
         
         AnimWalking();
-        Flipment();
+        Flip();
     }
 
     private void FixedUpdate() 
     {
         //Gives a character a velocity
-        rb.velocity = new Vector2(move_dir * movement_speed, gameObject.transform.position.y);
+        _rb.velocity = new Vector2(_moveDir * movementSpeed, gameObject.transform.position.y);
     } 
 
-    //Flips a character to look left or right
-    void Flipment()
+    /// <summary>
+    /// Flips a character to look left or right
+    /// </summary>
+    private void Flip()
     {
-        if (move_dir > 0 && !p_FacingRight)
+
+        if (_moveDir > 0 && !_pFacingRight)
         {
-            p_FacingRight = !p_FacingRight;
-            Vector3 theScale = transform.localScale;
+            _pFacingRight = !_pFacingRight;
+            var theScale = transform.localScale;
 		    theScale.x *= -1;
-		    transform.localScale = theScale;
+            // ReSharper disable once Unity.InefficientPropertyAccess
+            transform.localScale = theScale;
             
         }
-        else if (move_dir < 0 && p_FacingRight)
+        else if (_moveDir < 0 && _pFacingRight)
         {
-            p_FacingRight = !p_FacingRight;
-            Vector3 theScale = transform.localScale;
+            _pFacingRight = !_pFacingRight;
+            var theScale = transform.localScale;
 		    theScale.x *= -1;
-		    transform.localScale = theScale;
+            // ReSharper disable once Unity.InefficientPropertyAccess
+            transform.localScale = theScale;
         }
     }
 
-    //Animates a character when he's walking 
-    void AnimWalking()
+    /// <summary>
+    /// Animates a character when he's walking 
+    /// </summary>
+    private void AnimWalking()
     {
-        float velocity = 0;
-        if(move_dir == 1 || move_dir == -1) velocity = 1;
+        float velocity;
+        if(Math.Abs(_moveDir - 1) < 0.01f || Math.Abs(_moveDir + 1) < 0.01f) velocity = 1;
         else velocity = 0;
-        animator.SetFloat("speed", velocity);
+        _animator.SetFloat(Speed, velocity);
     }
 
 }

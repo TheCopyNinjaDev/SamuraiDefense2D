@@ -23,7 +23,7 @@ public class Movement : MonoBehaviour
 
     private void Update() 
     {
-        if(!Fighting.is_fighting) //If character is fighting than he can't move
+        if(!Fighting.IsFighting) //If character is fighting than he can't move
         {
             move_dir = Input.GetAxisRaw("Horizontal"); //Gives the variable a direction of x
         }

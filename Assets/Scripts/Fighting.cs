@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Fighting : MonoBehaviour
 {
 
     #region public_references
-        public AnimationClip UpperHit;
-        public AnimationClip DownHit;
+        [FormerlySerializedAs("UpperHit")] public AnimationClip upperHit;
+        [FormerlySerializedAs("DownHit")] public AnimationClip downHit;
 
         public Transform attackPoint;
         public float attackRange = 0.5f;
@@ -15,91 +16,126 @@ public class Fighting : MonoBehaviour
 
         public GameObject smoke;
 
-        public AudioClip sword_cluck;
+        [FormerlySerializedAs("sword_cluck")] public AudioClip swordCluck;
 
-        public ParticleSystem sword_col;
+        [FormerlySerializedAs("sword_col")] public ParticleSystem swordCol;
 
-        public static bool is_fighting = false;
+        public static bool IsFighting;
     #endregion
 
-    Animator animator;
-    AudioSource audioSource;
+    private Animator _animator;
+    private AudioSource _audioSource;
 
     private void Start() 
     {
-        animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        // Initialization
+        _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update() 
     {
+        // Attacks
+        Attack();
+    }
+
+
+    /// <summary>
+    /// Attacks depending on input
+    /// </summary>
+    private void Attack()
+    {
         if(Input.GetButtonDown("Fire1"))
         {
-            StartCoroutine(PlayAnim(DownHit, "DownHitButtonClicked"));
+            StartCoroutine(PlayAnim(downHit, "DownHitButtonClicked"));
             AttackDown();
-            is_fighting = true;
+            IsFighting = true;
         }
         if(Input.GetButtonDown("Fire2"))
         {
-            StartCoroutine(PlayAnim(UpperHit, "UpperHitButtonClicked"));
+            StartCoroutine(PlayAnim(upperHit, "UpperHitButtonClicked"));
             AttackUp();
-            is_fighting = true;
+            IsFighting = true;
         }
         if(Input.GetButtonUp("Fire1"))
         {
-            is_fighting = false;
+            IsFighting = false;
         }
         if(Input.GetButtonUp("Fire2"))
         {
-            is_fighting = false;
+            IsFighting = false;
         }
     }
 
-    IEnumerator PlayAnim(AnimationClip anim, string trig)
+    /// <summary>
+    /// Plays attack animation with cooldown
+    /// </summary>
+    /// <param name="anim">Currently playing animation</param>
+    /// <param name="trig">Trigger for attack</param>
+    /// <returns></returns>
+    private IEnumerator PlayAnim(AnimationClip anim, string trig)
     {
-        animator.SetBool(trig, true);
+        _animator.SetBool(trig, true);
         yield return new WaitForSeconds(anim.length);
-        animator.SetBool(trig, false);
+        _animator.SetBool(trig, false);
     }
 
-    void AttackUp()
+    // ReSharper disable Unity.PerformanceAnalysis
+    /// <summary>
+    /// Attacks from above
+    /// </summary>
+    private void AttackUp()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyDownGurdLayer);
+        // ReSharper disable once Unity.PreferNonAllocApi
+        var hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, 
+            enemyDownGurdLayer);
 
-        foreach(Collider2D enemy in hitEnemies)
+        foreach(var enemy in hitEnemies)
         {
             Destroy(enemy.gameObject, 0.2f);
             Instantiate(smoke, enemy.transform.position, Quaternion.identity);
         }
 
-        Collider2D[] n_hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyUpGuardLayer);
-        foreach(Collider2D enemy in n_hitEnemies)
+        // ReSharper disable once Unity.PreferNonAllocApi
+        var nHitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange,
+            enemyUpGuardLayer);
+        foreach(var _ in nHitEnemies)
         {
-            audioSource.clip = sword_cluck;
-            audioSource.Play();
-            Vector3 block_pos = new Vector3(attackPoint.transform.position.x, attackPoint.transform.position.y + 1f, attackPoint.transform.position.z);
+            _audioSource.clip = swordCluck;
+            _audioSource.Play();
+            var attackPointTransform = attackPoint.transform;
+            var attackPosition = attackPointTransform.position;
+            var blockPos = new Vector3(attackPosition.x, attackPosition.y + 1f, attackPosition.z);
 
-            Instantiate(sword_col, block_pos, Quaternion.identity);
+            Instantiate(swordCol, blockPos, Quaternion.identity);
             Destroy(GameObject.Find("Sword_col(Clone)"), 0.2f);
         }
     }
 
-    void AttackDown()
+    // ReSharper disable Unity.PerformanceAnalysis
+    /// <summary>
+    /// Attacks from bottom
+    /// </summary>
+    private void AttackDown()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyUpGuardLayer);
+        // ReSharper disable once Unity.PreferNonAllocApi
+        var hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, 
+            enemyUpGuardLayer);
 
-        foreach(Collider2D enemy in hitEnemies)
+        foreach(var enemy in hitEnemies)
         {
             Destroy(enemy.gameObject, 0.3f);
             Instantiate(smoke, enemy.transform.position, Quaternion.identity);
         }
 
-        Collider2D[] n_hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyDownGurdLayer);
-        foreach(Collider2D enemy in n_hitEnemies)
+        // ReSharper disable once Unity.PreferNonAllocApi
+        var nHitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, 
+            enemyDownGurdLayer);
+        foreach(var _ in nHitEnemies)
         {
-            audioSource.clip = sword_cluck;
-            audioSource.Play();
-            Instantiate(sword_col, attackPoint.position, Quaternion.identity);
+            _audioSource.clip = swordCluck;
+            _audioSource.Play();
+            Instantiate(swordCol, attackPoint.position, Quaternion.identity);
             Destroy(GameObject.Find("Sword_col(Clone)"), 0.2f);
         }
 

@@ -28,11 +28,22 @@ public class Fighting : MonoBehaviour
 
     private void Start() 
     {
+        // Initialization
         _animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update() 
+    {
+        // Attacks
+        Attack();
+    }
+
+
+    /// <summary>
+    /// Attacks depending on input
+    /// </summary>
+    private void Attack()
     {
         if(Input.GetButtonDown("Fire1"))
         {
@@ -56,7 +67,13 @@ public class Fighting : MonoBehaviour
         }
     }
 
-    IEnumerator PlayAnim(AnimationClip anim, string trig)
+    /// <summary>
+    /// Plays attack animation with cooldown
+    /// </summary>
+    /// <param name="anim">Currently playing animation</param>
+    /// <param name="trig">Trigger for attack</param>
+    /// <returns></returns>
+    private IEnumerator PlayAnim(AnimationClip anim, string trig)
     {
         _animator.SetBool(trig, true);
         yield return new WaitForSeconds(anim.length);
@@ -64,6 +81,9 @@ public class Fighting : MonoBehaviour
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
+    /// <summary>
+    /// Attacks from above
+    /// </summary>
     private void AttackUp()
     {
         // ReSharper disable once Unity.PreferNonAllocApi
@@ -93,13 +113,16 @@ public class Fighting : MonoBehaviour
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
+    /// <summary>
+    /// Attacks from bottom
+    /// </summary>
     private void AttackDown()
     {
         // ReSharper disable once Unity.PreferNonAllocApi
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, 
+        var hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, 
             enemyUpGuardLayer);
 
-        foreach(Collider2D enemy in hitEnemies)
+        foreach(var enemy in hitEnemies)
         {
             Destroy(enemy.gameObject, 0.3f);
             Instantiate(smoke, enemy.transform.position, Quaternion.identity);

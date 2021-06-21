@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0378689a-58cc-4750-b57c-b213f34865db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Samurai Defense 2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Samurai Defense 2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fighting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fighting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NinjaMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NinjaMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/75/755d5d3a481d85f699e8db6b27f4b628.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/75/755d5d3a481d85f699e8db6b27f4b628.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,9 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Fighting.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/NinjaMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Fighting.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1u5TJKcIQdtPUyNPTrDu8SEnAfI" />
@@ -67,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1623954379708</updated>
       <workItem from="1623954387800" duration="1585000" />
-      <workItem from="1624297760403" duration="2231000" />
+      <workItem from="1624297760403" duration="3332000" />
     </task>
     <servers />
   </component>

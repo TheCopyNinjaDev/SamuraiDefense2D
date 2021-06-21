@@ -1,27 +1,36 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class NinjaMovement : MonoBehaviour 
 {
 
-    public float movement_speed = 7f;
-    public float move_dir = -1f;
+    [FormerlySerializedAs("movement_speed")] public float movementSpeed = 7f;
+    [FormerlySerializedAs("move_dir")] public float moveDir = -1f;
 
-    Animator animator;
+    private Animator _animator;
+    private static readonly int Speed = Animator.StringToHash("speed");
 
 
     private void Start() 
     {
-        animator = GetComponent<Animator>();
+        // Initialize animator
+        _animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
     {
+        // Moving NPCs
         Move();
-    } 
+    }
 
-    void Move()
+    /// <summary>
+    /// Moves NPCs to move direction
+    /// </summary>
+    private void Move()
     {
-        transform.position = new Vector3(transform.position.x + movement_speed * move_dir, transform.position.y);
-        animator.SetFloat("speed", 1f);
+        var position = transform.position;
+        // ReSharper disable once Unity.InefficientPropertyAccess
+        transform.position = new Vector3(position.x + movementSpeed * moveDir, position.y);
+        _animator.SetFloat(Speed, 1f);
     }
 }

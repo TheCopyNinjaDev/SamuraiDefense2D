@@ -364,7 +364,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1145389492}
           m_TargetAssemblyTypeName: Players.Movement, Assembly-CSharp
-          m_MethodName: SetDirection
+          m_MethodName: MoveInDirection
           m_Mode: 4
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -380,7 +380,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1145389492}
           m_TargetAssemblyTypeName: Players.Movement, Assembly-CSharp
-          m_MethodName: SetDirection
+          m_MethodName: MoveInDirection
           m_Mode: 4
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -561,7 +561,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1145389492}
           m_TargetAssemblyTypeName: Players.Movement, Assembly-CSharp
-          m_MethodName: SetDirection
+          m_MethodName: MoveInDirection
           m_Mode: 4
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -577,7 +577,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1145389492}
           m_TargetAssemblyTypeName: Players.Movement, Assembly-CSharp
-          m_MethodName: SetDirection
+          m_MethodName: MoveInDirection
           m_Mode: 4
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

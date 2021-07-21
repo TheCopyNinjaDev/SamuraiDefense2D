@@ -37,19 +37,13 @@ namespace Players
             Flip();
         }
 
-        private void FixedUpdate() 
-        {
-            //Gives a character a velocity
-            MoveInDirection(_moveDir);
-        }
-
-        
         /// <summary>
         /// Moves player to a direction
         /// </summary>
         /// <param name="direction">float - where players need to go</param>
-        private void MoveInDirection(float direction)
+        public void MoveInDirection(float direction)
         {
+            _moveDir = direction;
             _rb.velocity = new Vector2(direction * movementSpeed, gameObject.transform.position.y);
         }
 
@@ -88,11 +82,5 @@ namespace Players
             else velocity = 0;
             _animator.SetFloat(Speed, velocity);
         }
-
-        public void SetDirection(float direction)
-        {
-            _moveDir = direction;
-        }
-
     }
 }

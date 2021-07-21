@@ -31,7 +31,7 @@ namespace Players
             {
                 //_moveDir = Input.GetAxisRaw("Horizontal"); //Gives the variable a direction of x
             }
-            //else _moveDir = 0; //If he's fighting than he stops
+            //else _moveDir = 0; //If he's fighting then he stops
         
             AnimWalking();
             Flip();
@@ -89,7 +89,7 @@ namespace Players
             _animator.SetFloat(Speed, velocity);
         }
 
-        public void ButtonRight(float direction)
+        public void SetDirection(float direction)
         {
             _moveDir = direction;
         }

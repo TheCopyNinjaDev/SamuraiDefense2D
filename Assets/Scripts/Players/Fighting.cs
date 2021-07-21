@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 namespace Players
@@ -14,7 +15,7 @@ namespace Players
         public Transform attackPoint;
         public float attackRange = 0.5f;
         public LayerMask enemyUpGuardLayer;
-        public LayerMask enemyDownGurdLayer;
+        [FormerlySerializedAs("enemyDownGurdLayer")] public LayerMask enemyDownGuardLayer;
 
         public GameObject smoke;
 
@@ -34,38 +35,28 @@ namespace Players
             _animator = GetComponent<Animator>();
             _audioSource = GetComponent<AudioSource>();
         }
-
-        private void Update() 
-        {
-            // Attacks
-            //Attack();
-        }
-
-
+        
         /// <summary>
         /// Attacks depending on input
         /// </summary>
-        private void Attack()
+        /// <param name="AttackType">Type of attack needs to be perform</param>
+        public void Attack(string AttackType)
         {
-            if(Input.GetButtonDown("Fire1"))
+            switch (AttackType)
             {
-                StartCoroutine(PlayAnim(downHit, "DownHitButtonClicked"));
-                AttackDown();
-                IsFighting = true;
-            }
-            if(Input.GetButtonDown("Fire2"))
-            {
-                StartCoroutine(PlayAnim(upperHit, "UpperHitButtonClicked"));
-                AttackUp();
-                IsFighting = true;
-            }
-            if(Input.GetButtonUp("Fire1"))
-            {
-                IsFighting = false;
-            }
-            if(Input.GetButtonUp("Fire2"))
-            {
-                IsFighting = false;
+                case "down":
+                    StartCoroutine(PlayAnim(downHit, "DownHitButtonClicked"));
+                    AttackDown();
+                    IsFighting = true;
+                    break;
+                case "up":
+                    StartCoroutine(PlayAnim(upperHit, "UpperHitButtonClicked"));
+                    AttackUp();
+                    IsFighting = true;
+                    break;
+                default:
+                    IsFighting = false;
+                    break;
             }
         }
 
@@ -90,7 +81,7 @@ namespace Players
         {
             // ReSharper disable once Unity.PreferNonAllocApi
             var hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, 
-                enemyDownGurdLayer);
+                enemyDownGuardLayer);
 
             foreach(var enemy in hitEnemies)
             {
@@ -132,7 +123,7 @@ namespace Players
 
             // ReSharper disable once Unity.PreferNonAllocApi
             var nHitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, 
-                enemyDownGurdLayer);
+                enemyDownGuardLayer);
             foreach(var _ in nHitEnemies)
             {
                 _audioSource.clip = swordCluck;
@@ -150,7 +141,6 @@ namespace Players
 
             Gizmos.DrawWireSphere(attackPoint.position, attackRange);
         }
-
     }
 }
 

@@ -50,10 +50,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Enemies\SpawnSystem.cs" />
      <Compile Include="Assets\Scripts\Players\Movement.cs" />
      <Compile Include="Assets\Scripts\Enemies\NinjaMovement.cs" />
      <Compile Include="Assets\Scripts\Players\Fighting.cs" />
-     <Compile Include="Assets\Scripts\Enemies\SpawnSystem.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Games/SamuraiDefense2D/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

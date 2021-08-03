@@ -8,7 +8,7 @@ namespace Enemies
     {
 
         [FormerlySerializedAs("movement_speed")] public float movementSpeed = 7f;
-        [FormerlySerializedAs("move_dir")] public int moveDir = -1;
+        private int _moveDir;
 
         private Animator _animator;
         private static readonly int Speed = Animator.StringToHash("speed");
@@ -23,10 +23,13 @@ namespace Enemies
         private void FixedUpdate()
         {
             // Applies direction
-            moveDir = ChooseDirection();
+            _moveDir = ChooseDirection();
             
             // Moving NPCs
-            Move(moveDir);
+            Move(_moveDir);
+            
+            // Rotates NPCs
+            TurnToDirection(_moveDir);
         }
 
         /// <summary>
@@ -41,9 +44,21 @@ namespace Enemies
             _animator.SetFloat(Speed, 1f);
         }
 
-        private void Rotate()
+        /// <summary>
+        /// Turns npc to a headed direction
+        /// </summary>
+        /// <param name="direction">The direction in which npc needs to be turned</param>
+        private void TurnToDirection(int direction)
         {
-            //TODO rotation relatively on direction
+            switch (direction)
+            {
+                case 1:
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                    break;
+                case -1:
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                    break;
+            }
         }
 
         /// <summary>

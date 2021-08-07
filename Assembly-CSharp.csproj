@@ -50,6 +50,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Enemies\SpawnSystem.cs" />
      <Compile Include="Assets\Scripts\Players\Movement.cs" />
      <Compile Include="Assets\Scripts\Enemies\NinjaMovement.cs" />
      <Compile Include="Assets\Scripts\Players\Fighting.cs" />

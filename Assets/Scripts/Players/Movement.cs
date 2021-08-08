@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 namespace Players
 {
-    public class Movement : MonoBehaviour 
+    public class Movement : MonoBehaviour
     {
         #region public
         [FormerlySerializedAs("movement_speed")] public float movementSpeed = 7f;
@@ -15,7 +15,7 @@ namespace Players
         private Rigidbody2D _rb;
         private Animator _animator;
         private static readonly int Speed = Animator.StringToHash("speed");
-
+        
         private void Start() 
         {
             //Initialization of components

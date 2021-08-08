@@ -225,11 +225,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!4 &265968028 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1235247562776573792, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
-  m_PrefabInstance: {fileID: 1235247562560338207}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &374149613
 GameObject:
   m_ObjectHideFlags: 0
@@ -10628,49 +10623,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1391756376 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1235247563705563313, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
+--- !u!114 &1391756383 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1391756383, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
   m_PrefabInstance: {fileID: 1235247562560338207}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1391756383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391756376}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efbe2bd5eaf8c2d43821fcca4f8c7dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 7
---- !u!114 &1391756384
+--- !u!114 &1391756384 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1391756384, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
+  m_PrefabInstance: {fileID: 1235247562560338207}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391756376}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf316b2f333e7b5488f5b2c7bc971258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upperHit: {fileID: 7400000, guid: 3723ef0a37e96fc439a1e3d655f88158, type: 2}
-  downHit: {fileID: 7400000, guid: 4948e9971012cfe44af1ead9b4b86be6, type: 2}
-  attackPoint: {fileID: 265968028}
-  attackRange: 0.5
-  enemyUpGuardLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  enemyDownGuardLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  smoke: {fileID: 1064963816146675850, guid: e8a7d1f384d1d6e44893fc97d6a74d53, type: 3}
-  swordCluck: {fileID: 8300000, guid: ff3ecf82e398a814e823a9a9ac8cc143, type: 3}
-  swordCol: {fileID: 8647819155840055673, guid: ea81e9717f557fe4e890ddf056462494, type: 3}
 --- !u!1001 &108775574035975297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10787,9 +10761,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: samurai
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1235247563705563307, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
-    - {fileID: 1235247563705563306, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
 --- !u!1001 &7637167621371944935
 PrefabInstance:

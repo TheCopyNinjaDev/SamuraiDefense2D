@@ -10658,7 +10658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108775574158438119, guid: e6ab0a6991efcdf4b83085f01b6d4862, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 108775574158438123, guid: e6ab0a6991efcdf4b83085f01b6d4862, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10715,11 +10715,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1235247563705563310, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2
+      value: -2.128
       objectReference: {fileID: 0}
     - target: {fileID: 1235247563705563310, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3400002
+      value: -4.745
       objectReference: {fileID: 0}
     - target: {fileID: 1235247563705563310, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10756,6 +10756,38 @@ PrefabInstance:
     - target: {fileID: 1235247563705563310, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235247563705563310, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.036456
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235247563705563310, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.036456
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235247563705563310, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.036456
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235247563705563311, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4723107735738678597, guid: 6a20c7310f3218a4f8189413494d2342, type: 3}
+    - target: {fileID: 1235247563705563311, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235247563705563311, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
+      propertyPath: m_Size.x
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235247563705563311, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
+      propertyPath: m_Size.y
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235247563705563312, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
+      propertyPath: m_Mass
+      value: 2.9863653
       objectReference: {fileID: 0}
     - target: {fileID: 1235247563705563313, guid: 1eb9b2321937df840817b63d3820df36, type: 3}
       propertyPath: m_Name
@@ -10836,7 +10868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7637167621422201110, guid: ad24d20b8282aac44976a6ba1eeb8206, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad24d20b8282aac44976a6ba1eeb8206, type: 3}
@@ -10847,6 +10879,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 357318688, guid: 49ccb717b3ac87a4f992d801a8d1427e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 357318689, guid: 49ccb717b3ac87a4f992d801a8d1427e, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 357318690, guid: 49ccb717b3ac87a4f992d801a8d1427e, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10866,6 +10906,14 @@ PrefabInstance:
     - target: {fileID: 357318690, guid: 49ccb717b3ac87a4f992d801a8d1427e, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MoveInDirection
+      objectReference: {fileID: 0}
+    - target: {fileID: 447309050, guid: 49ccb717b3ac87a4f992d801a8d1427e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447309051, guid: 49ccb717b3ac87a4f992d801a8d1427e, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 447309052, guid: 49ccb717b3ac87a4f992d801a8d1427e, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target

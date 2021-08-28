@@ -24,26 +24,32 @@ namespace Players
         }
 
 
-        private void Update() 
+        private void LateUpdate() 
         {
             //If character is fighting than he can't move
             if(!Fighting.IsFighting) 
             {
-                //_moveDir = Input.GetAxisRaw("Horizontal"); //Gives the variable a direction of x
+                AnimWalking();
+                MoveInDirection(_moveDir);
+                Flip();
             }
-            //else _moveDir = 0; //If he's fighting then he stops
-        
-            AnimWalking();
-            Flip();
         }
+
+        /// <summary>
+        /// Sets needed direction
+        /// </summary>
+        /// <param name="direction">Needed direction</param>
+        public void SetMoveDirection(float direction)
+        {
+            _moveDir = direction;
+        } 
 
         /// <summary>
         /// Moves player to a direction
         /// </summary>
         /// <param name="direction">float - where players need to go</param>
-        public void MoveInDirection(float direction)
+        private void MoveInDirection(float direction)
         {
-            _moveDir = direction;
             _rb.velocity = new Vector2(direction * movementSpeed, gameObject.transform.position.y);
         }
 

@@ -2,52 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e0e666b-3917-4655-b712-79d7af7fa5a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SamuraiDefense2D/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_08_2021_23_32_[Default_Changelist]1/ArtifactDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SamuraiDefense2D/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_08_2021_23_32_[Default_Changelist]1/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SamuraiDefense2D/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_08_2021_23_32_[Default_Changelist]1/SourceAssetDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SamuraiDefense2D/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_08_2021_23_32_[Default_Changelist]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SamuraiDefense2D/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_08_2021_23_32__Default_Changelist_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SamuraiDefense2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SamuraiDefense2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/DownHit.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/DownHit.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Meditation.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Meditation.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Meditation_IDLE.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Meditation_IDLE.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ninja.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ninja.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NinjaD.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NinjaD.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NinjaD_IDLE.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NinjaD_IDLE.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NinjaD_Run.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/NinjaD_Run.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ninja_IDLE.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ninja_IDLE.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ninja_Run.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Ninja_Run.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Samurai/IDLE.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Samurai/IDLE.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/UpperHit.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/UpperHit.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Walking.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Walking.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/samurai.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/samurai.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Players/Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/FixedSprites/Samurai/Attack1.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/FixedSprites/Samurai/Attack1.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/FixedSprites/Samurai/Attack2.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/FixedSprites/Samurai/Attack2.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/FixedSprites/Samurai/Idle.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/FixedSprites/Samurai/Idle.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/FixedSprites/Samurai/Run.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/FixedSprites/Samurai/Run.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/75/755d5d3a481d85f699e8db6b27f4b628.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/75/755d5d3a481d85f699e8db6b27f4b628.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8d/8db03bb3d3128506006437d2783552b6.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8d/8db03bb3d3128506006437d2783552b6.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

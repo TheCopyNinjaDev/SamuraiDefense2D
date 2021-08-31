@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -35,7 +36,12 @@ namespace Players
             _animator = GetComponent<Animator>();
             _audioSource = GetComponent<AudioSource>();
         }
-        
+
+        private void Update()
+        {
+            Attack(default);
+        }
+
         /// <summary>
         /// Attacks depending on input
         /// </summary>
@@ -45,14 +51,14 @@ namespace Players
             switch (AttackType)
             {
                 case "down":
+                    IsFighting = true;
                     StartCoroutine(PlayAnim(downHit, "DownHitButtonClicked"));
                     AttackDown();
-                    IsFighting = true;
                     break;
                 case "up":
+                    IsFighting = true;
                     StartCoroutine(PlayAnim(upperHit, "UpperHitButtonClicked"));
                     AttackUp();
-                    IsFighting = true;
                     break;
                 default:
                     IsFighting = false;
